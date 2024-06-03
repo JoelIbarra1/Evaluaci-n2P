@@ -19,7 +19,7 @@
 
 
         <Picker x:Name="JITextEditor"
-        Title="Select a monkey">
+        Title="selecciona tu operador">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>CLARO</x:String>
