@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Evaluación2P.Views.TelfPage"
+             Title="TelfPage">
+    <VerticalStackLayout Spacing="10" Margin="5">
+        <Editor x:Name="JITextEditor1"
+                Placeholder="Introduce tu numero telefonico"
+                Text="{Binding Text}"
+                HeightRequest="100" />
+        <Editor x:Name="JITextEditor2"
+                Placeholder="Introduce tu operador"
+                Text="{Binding Text}"
+                HeightRequest="100" />
+        <Editor x:Name="JITextEditor3"
+                Placeholder="Introduce el monto de tu recarga"
+                Text="{Binding Text}"
+                HeightRequest="100" />
+
+
+        <Picker x:Name="JITextEditor"
+        Title="Select a monkey">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>CLARO</x:String>
+                    <x:String>MOVISTAR</x:String>
+                    <x:String>TUENTI</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <StackLayout>
+            <Label Text="CUANTO VAS A RECARGAR?" />
+            <RadioButton Content="3" />
+            <RadioButton Content="5" />
+            <RadioButton Content="10"
+                 IsChecked="true" />
+        </StackLayout>
+
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
+            <Button Text="Recargar"
+                    Clicked="JISaveButton_Clicked" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
